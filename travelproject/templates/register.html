@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-image:url('https://png.pngtree.com/thumb_back/fh260/background/20201101/pngtree-scene-with-geometrical-forms-the-poster-model-minimal-background-render-image_452981.jpg');background-repeat:no-repeat;background-size:cover">
+<h2>Registration</h2>
+
+<form action="register" method="post" >
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="enter your username" ><br>
+    <input type="text" name="first_name" placeholder="enter your first name" ><br>
+    <input type="text" name="last_name" placeholder="enter your last_name" ><br>
+    <input type="email" name="email" placeholder="enter your email" ><br>
+    <input type="password" name="password" placeholder="enter your password" ><br>
+    <input type="text" name="password1" placeholder="enter your password1" ><br>
+    <input type="submit" >
+
+
+</form>
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+</body>
+</html>
